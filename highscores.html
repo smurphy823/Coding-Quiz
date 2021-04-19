@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highscores</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+    <div class="infoBox" id="infoBox">
+
+        <h1 class="infoTitle" id="infoTitle">Highscores</h1>
+        <ol class="answerBox" id="scoresBox"></ol>
+
+        <div class="startBtn" id="resultDisplay"><button id="homeBtn"><a  href="index.html">Home</a></button></div>
+
+    </div>
+
+    <script>
+        function printHighscores() {
+    var highscores = JSON.parse(localStorage.getItem("highscores") )|| [];
+
+    var scoresBox = document.querySelector("#scoresBox");
+
+    highscores.sort(function(a,b){
+        return b.score - a.score
+    });
+    
+    highscores.forEach(score => {
+    var li = document.createElement("li");
+    
+    li.textContent = score.userInput + " " + score.score;
+    scoresBox.appendChild(li);
+
+    });
+    
+}
+printHighscores();
+
+
+    </script>
+</body>
+
+</html>

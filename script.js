@@ -65,9 +65,9 @@ var questions = [{
 {
     question: "What are people who write computer code?",
     choices: [
-        "Makers",
+        "Geeks",
         "Manufacturer",
-        "Programers",
+        "Programmers",
         "Professor"
 
     ],
@@ -93,7 +93,7 @@ function builtQuestionCard() {
         var button = document.createElement("button");
         button.textContent = choice;
         button.setAttribute("value", choice);
-        button.setAttribute("style", "height: 60px; width:100% ; font-size: 12px;  justify-content:center; align-items:center; padding: 5px; margin: 5px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff;");
+        button.setAttribute("style", "height: 60px; width:100% ; font-size: 12px;  justify-content:center; align-items:center; padding: 5px; margin: 5px; cursor: pointer; border-radius: 5px; border: 1px solid #DDA0DD;");
         button.onclick = evaulateAnswer;
         answerBox.appendChild(button);
         startBtn.remove();
@@ -104,7 +104,7 @@ function builtQuestionCard() {
 
 }
 //set style for result div
-resultDisplay.setAttribute("style", "color: #007bff; font-weight: 400; ");
+resultDisplay.setAttribute("style", "color: #DDA0DD; font-weight: 400; ");
 
 
 function evaulateAnswer() {
@@ -148,7 +148,7 @@ function evaulateAnswer() {
         var submitBtn = document.createElement("button");
         submitBtn.textContent = "Submit";
         submitBtn.setAttribute("class","submitBtn");
-        submitBtn.setAttribute("style", "height: 40px; width: 30%; border: 1px solid #007bff; background: #007bff; border-radius: 5px;color: #fff; font-size: 15px; font-weight: 500;cursor: pointer;");
+        submitBtn.setAttribute("style", "height: 40px; width: 30%; border: 1px solid #DDA0DD; background: #DDA0DD; border-radius: 5px;color: #DDA0DD; font-size: 15px; font-weight: 500;cursor: pointer;");
         //answerBox.setAttribute("style", "display:flex");
         answerBox.appendChild(submitBtn);
 
@@ -185,7 +185,7 @@ function setTime() {
             timerResult.textContent = "You FINISHED the game with  " + secondsLeft + " seconds left!!";
             answerBox.appendChild(timerResult);
             infoTitle.textContent = "GAME OVER!!!";
-            infoTitle.setAttribute("style", "color: red;");
+            infoTitle.setAttribute("style", "color: purple;");
             resultDisplay.textContent = "Congratulation! You have " + r + " RIGHT and " + w + " WRONG out of 5 questions";
     
             answerBox.innerHTML = "";
@@ -204,7 +204,7 @@ function setTime() {
             var submitBtn = document.createElement("button");
             submitBtn.textContent = "Submit";
             submitBtn.setAttribute("class","submitBtn");
-            submitBtn.setAttribute("style", "height: 40px; width: 30%; border: 1px solid #007bff; background: #007bff; border-radius: 5px;color: #fff; font-size: 15px; font-weight: 500;cursor: pointer;");
+            submitBtn.setAttribute("style", "height: 40px; width: 30%; border: 1px solid #800080; background: #DDA0DD; border-radius: 5px;color: #800080; font-size: 15px; font-weight: 500;cursor: pointer;");
             //answerBox.setAttribute("style", "display:flex");
             answerBox.appendChild(submitBtn);
     
